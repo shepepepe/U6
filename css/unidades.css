@@ -1,0 +1,316 @@
+/* Estilos que comparten las páginas de las unidades (U7 en adelante).
+   Usan los mismos colores del portfolio: negro y naranja. */
+
+
+/* ENCABEZADO DE LA UNIDAD */
+
+.unidad-header{
+
+    padding:130px 0 40px;
+    text-align:center;
+
+    background:
+    radial-gradient(
+    circle at 50% 0%,
+    rgba(255,102,0,.28),
+    transparent 60%
+    );
+
+}
+
+
+.unidad-numero{
+
+    color:#ff6600;
+    font-weight:900;
+    letter-spacing:4px;
+
+}
+
+
+.unidad-header h1{
+
+    font-size:52px;
+    font-weight:900;
+
+}
+
+
+.unidad-header p{
+
+    color:#bbb;
+    font-size:18px;
+    max-width:720px;
+    margin:10px auto 15px;
+
+}
+
+
+.etiqueta{
+
+    display:inline-block;
+    border:1px solid #ff6600;
+    color:#ff6600;
+    border-radius:20px;
+    padding:2px 14px;
+    margin:4px;
+    font-size:14px;
+
+}
+
+
+.volver{
+
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+
+.volver:hover{
+
+    color:#ff6600;
+
+}
+
+
+
+/* TARJETAS DE EJERCICIOS */
+
+.ejercicios{
+
+    padding-bottom:60px;
+
+}
+
+
+.ejercicios h2{
+
+    margin-top:40px;
+
+}
+
+
+.ejercicio{
+
+    background:#111;
+    border:1px solid #222;
+    border-left:4px solid #ff6600;
+    border-radius:16px;
+    padding:25px;
+    margin-bottom:25px;
+
+}
+
+
+.ejercicio h3{
+
+    color:#ff6600;
+    font-size:24px;
+
+}
+
+
+.ejercicio p,
+.ejercicio li{
+
+    color:#ddd;
+
+}
+
+
+.ejercicio code{
+
+    color:#ffb37a;
+
+}
+
+
+.respuesta{
+
+    background:#1b1b1b;
+    border-radius:10px;
+    padding:12px 16px;
+    margin-top:12px;
+
+}
+
+
+.respuesta strong{
+
+    color:#ff6600;
+
+}
+
+
+
+/* BOTONES */
+
+.botones{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:15px;
+
+}
+
+
+.btn-ejecutar,
+.btn-codigo{
+
+    border-radius:10px;
+    padding:8px 18px;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+
+a.btn-ejecutar{
+
+    display:inline-block;
+    text-decoration:none;
+
+}
+
+
+.btn-ejecutar{
+
+    background:#ff6600;
+    color:white;
+    border:1px solid #ff6600;
+
+}
+
+
+.btn-ejecutar:hover{
+
+    background:#ff3300;
+    border-color:#ff3300;
+
+}
+
+
+.btn-codigo{
+
+    background:transparent;
+    color:#ff6600;
+    border:1px solid #ff6600;
+
+}
+
+
+.btn-codigo:hover{
+
+    background:#ff6600;
+    color:white;
+
+}
+
+
+
+/* CONSOLA Y CÓDIGO */
+
+.salida,
+.codigo{
+
+    display:none;
+    border:1px solid #333;
+    border-radius:10px;
+    padding:15px;
+    margin-top:15px;
+    font-family:Consolas, 'Courier New', monospace;
+    font-size:15px;
+    white-space:pre-wrap;
+    overflow:auto;
+    max-height:380px;
+
+}
+
+
+.salida{
+
+    background:#000;
+
+}
+
+
+.codigo{
+
+    background:#0b0b0b;
+    color:#f1f1f1;
+    margin-bottom:0;
+
+}
+
+
+.salida.visible,
+.codigo.visible{
+
+    display:block;
+
+}
+
+
+.linea-log{ color:#9effa1; }
+
+.linea-alert{ color:#ffd166; }
+
+.linea-prompt{ color:#8ecbff; }
+
+.linea-error{ color:#ff6b6b; }
+
+.linea-info{ color:#888; }
+
+
+
+/* FORMULARIOS (U13) */
+
+.ejercicio .form-control::placeholder{
+
+    color:#888;
+
+}
+
+
+
+/* NAVEGACIÓN ENTRE UNIDADES */
+
+.entre-unidades{
+
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    margin-top:40px;
+
+}
+
+
+.entre-unidades a{
+
+    color:#ff6600;
+    text-decoration:none;
+    font-weight:bold;
+
+}
+
+
+.entre-unidades a:hover{
+
+    color:white;
+
+}
+
+
+
+@media(max-width:768px){
+
+.unidad-header h1{
+
+font-size:36px;
+
+}
+
+}

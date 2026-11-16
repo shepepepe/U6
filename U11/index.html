@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>U11 - Arrays | Tobias Daian</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS del portfolio + CSS de las unidades -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/unidades.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-dark fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+    Tobias.DEV
+</a>
+
+<a class="volver" href="../index.html#portfolio">
+    ← Volver al portfolio
+</a>
+
+</div>
+
+</nav>
+
+
+
+<!-- ENCABEZADO -->
+
+<header class="unidad-header">
+
+<div class="container">
+
+<div class="unidad-numero">UNIDAD 11</div>
+
+<h1>
+Arrays
+</h1>
+
+<p>
+Los arreglos guardan muchos valores en una sola variable. En esta unidad aprendí sus métodos y a recorrerlos con for, forEach y filter.
+</p>
+
+<span class="etiqueta">arrays</span>
+<span class="etiqueta">forEach()</span>
+<span class="etiqueta">filter()</span>
+<span class="etiqueta">splice()</span>
+
+</div>
+
+</header>
+
+
+
+<!-- EJERCICIOS -->
+
+<main class="container ejercicios">
+
+
+<h2>
+Proyecto de la unidad
+</h2>
+
+<hr>
+
+
+<article class="ejercicio" data-fn="superApp" data-codigo="logItems,superApp">
+
+<h3>
+🛒 Lista de Súper (Parte 3)
+</h3>
+
+<p>
+Una "Súper App" para manejar la lista del súper con comandos:
+</p>
+
+<ul>
+<li><code>nuevo</code>: pide un producto y lo agrega a la lista.</li>
+<li><code>listar</code>: llama a <code>logItems</code>, que muestra la lista numerada con <code>forEach()</code>.</li>
+<li><code>borrar</code>: pide el índice del producto y lo saca con <code>splice()</code>.</li>
+<li><code>salir</code>: termina el programa.</li>
+</ul>
+
+</article>
+
+
+<h2>
+Ejercicios
+</h2>
+
+<hr>
+
+
+<article class="ejercicio" data-fn="queDevuelveEsteCodigo">
+
+<h3>
+¿Qué devuelve este código?
+</h3>
+
+<p>
+Había que descubrir qué muestra el código sin probarlo en la consola.
+</p>
+
+<div class="respuesta">
+<p class="mb-0">
+Muestra <code>0</code>, <code>3</code>, <code>6</code> y <code>9</code>. El <code>forEach</code> recorre
+<code>numbers</code> (el parámetro se llama <code>color</code>, pero en realidad es cada número) y solo
+imprime los que son divisibles por 3. El arreglo <code>colores</code> no se usa nunca.
+</p>
+</div>
+
+</article>
+
+
+<article class="ejercicio" data-fn="probarReverse" data-codigo="imprimirInvertido,invertirArreglo,probarReverse">
+
+<h3>
+Reverse
+</h3>
+
+<p>
+Dos funciones: una imprime el arreglo con los elementos al revés <strong>sin modificarlo</strong>, y
+la otra sí lo modifica e invierte el orden.
+</p>
+
+</article>
+
+
+<article class="ejercicio" data-fn="ordenarPoema">
+
+<h3>
+Poema Desordenado
+</h3>
+
+<p>
+Un fragmento del Martín Fierro que vino con las palabras mezcladas. Lo paso a un arreglo con
+<code>split()</code>, lo ordeno y lo vuelvo a unir con <code>join()</code>.
+</p>
+
+</article>
+
+
+<article class="ejercicio" data-fn="probarIsUniform" data-codigo="isUniform,probarIsUniform">
+
+<h3>
+Desafío isUniform()
+</h3>
+
+<p>
+Devuelve <code>true</code> si todos los elementos del arreglo son iguales y <code>false</code> si no.
+Apenas encuentra uno distinto corta, no sigue recorriendo.
+</p>
+
+</article>
+
+
+<article class="ejercicio" data-fn="probarBiggestSmallest" data-codigo="biggest_smallest,probarBiggestSmallest">
+
+<h3>
+Biggest Smallest
+</h3>
+
+<p>
+Recibe un arreglo de números y, usando <code>forEach()</code>, encuentra el más chico y el más grande.
+</p>
+
+</article>
+
+
+<article class="ejercicio" data-fn="ejerciciosFilter">
+
+<h3>
+Filter
+</h3>
+
+<p>
+Cuatro ejercicios con <code>.filter()</code>: números mayores o iguales a 5, números pares, palabras
+de 3 letras o menos y quedarme solo con los strings de un arreglo mezclado.
+</p>
+
+</article>
+
+
+<article class="ejercicio" data-fn="playlistSinEscucharEjercicio">
+
+<h3>
+Playlist
+</h3>
+
+<p>
+Con <code>.filter()</code> armo una lista nueva con las canciones de la playlist que todavía no escuché.
+</p>
+
+</article>
+
+
+<article class="ejercicio" data-fn="probarFibonacci" data-codigo="fibonacci,probarFibonacci">
+
+<h3>
+Fibonacci
+</h3>
+
+<p>
+Una función que recibe una posición y devuelve el número que está en ese lugar de la serie de
+Fibonacci (0, 1, 1, 2, 3, 5, 8, 13...).
+</p>
+
+</article>
+
+
+<div class="entre-unidades">
+<a href="../U10/index.html">← U10 - Funciones</a>
+<a href="../U12/index.html">U12 - Objetos →</a>
+</div>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Tobias Daian
+</p>
+
+</footer>
+
+
+<!-- Primero mis ejercicios, después el ayudante que arma los botones -->
+<script src="script.js"></script>
+<script src="../js/unidad.js"></script>
+
+</body>
+
+</html>

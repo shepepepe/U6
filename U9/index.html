@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>U9 - While loop | Tobias Daian</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS del portfolio + CSS de las unidades -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/unidades.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-dark fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+    Tobias.DEV
+</a>
+
+<a class="volver" href="../index.html#portfolio">
+    ← Volver al portfolio
+</a>
+
+</div>
+
+</nav>
+
+
+
+<!-- ENCABEZADO -->
+
+<header class="unidad-header">
+
+<div class="container">
+
+<div class="unidad-numero">UNIDAD 09</div>
+
+<h1>
+While loop
+</h1>
+
+<p>
+Con while puedo repetir un bloque de código mientras se cumpla una condición. Lo usé para hacer el Piedra, Papel o Tijera y para reparar el código del Torneo Algorítmico.
+</p>
+
+<span class="etiqueta">while</span>
+<span class="etiqueta">Math.random()</span>
+<span class="etiqueta">variables de control</span>
+<span class="etiqueta">operador ternario</span>
+
+</div>
+
+</header>
+
+
+
+<!-- EJERCICIOS -->
+
+<main class="container ejercicios">
+
+
+<h2>
+Desafío de la unidad
+</h2>
+
+<hr>
+
+
+<article class="ejercicio" data-fn="piedraPapelOTijera">
+
+<h3>
+✊✋✌️ Piedra, Papel o Tijera
+</h3>
+
+<p>
+El programa me pide que elija piedra, papel o tijera, la compu elige al azar con
+<code>Math.random()</code> y me dice quién ganó. Al final pregunta si quiero volver a jugar,
+y mientras conteste que sí, el <code>while</code> sigue.
+</p>
+
+</article>
+
+
+<article class="ejercicio" data-fn="torneoAlgoritmico">
+
+<h3>
+🏆 Torneo Algorítmico
+</h3>
+
+<p>
+Nos dieron un código incompleto y con errores de un torneo de Piedra, Papel o Tijera contra la
+máquina, y había que repararlo. Esto es lo que arreglé:
+</p>
+
+<ul>
+<li><strong>Error 1:</strong> la condición del <code>while</code> usaba <code>||</code> y el torneo no cortaba cuando alguien llegaba al límite. La cambié por <code>&amp;&amp;</code>.</li>
+<li><strong>Error 2:</strong> normalicé lo que escribe el usuario con <code>.trim().toLowerCase()</code>, así no importa si pone mayúsculas.</li>
+<li><strong>Error 3:</strong> cambié la concatenación con <code>+</code> por un Template Literal.</li>
+<li><strong>Error 4:</strong> agregué la lógica de victoria y las variables acumuladoras (<code>victoriasUsuario++</code> y <code>victoriasMaquina++</code>).</li>
+<li><strong>Error 5:</strong> anuncio al campeón con un operador ternario.</li>
+</ul>
+
+<div class="respuesta">
+<p>
+<strong>¿Por qué el operador || original no servía para detener el torneo?</strong><br>
+Porque con <code>||</code> el <code>while</code> sigue mientras <em>al menos una</em> de las dos condiciones
+sea verdadera. Aunque yo llegue a 3 victorias, como la máquina todavía tiene menos de 3, el bucle
+sigue igual. Recién cortaría cuando los dos lleguen a 3. Con <code>&amp;&amp;</code> alcanza con que
+uno solo llegue a 3 para que la condición dé <code>false</code>.
+</p>
+
+<p class="mb-0">
+<strong>¿Qué línea garantiza que el bucle en algún momento devuelva false?</strong><br>
+Las líneas <code>victoriasUsuario++</code> y <code>victoriasMaquina++</code>. Sin esos acumuladores
+las dos variables quedarían siempre en 0 y la condición sería verdadera para siempre. Como en cada
+ronda que no es empate alguno suma un punto, tarde o temprano uno llega a 3 y
+<code>victoriasUsuario &lt; 3 &amp;&amp; victoriasMaquina &lt; 3</code> da <code>false</code>.
+</p>
+</div>
+
+</article>
+
+
+<div class="entre-unidades">
+<a href="../U8/index.html">← U8 - Condicionales</a>
+<a href="../U10/index.html">U10 - Funciones →</a>
+</div>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Tobias Daian
+</p>
+
+</footer>
+
+
+<!-- Primero mis ejercicios, después el ayudante que arma los botones -->
+<script src="script.js"></script>
+<script src="../js/unidad.js"></script>
+
+</body>
+
+</html>

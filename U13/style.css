@@ -1,0 +1,137 @@
+/* Estilos propios de la U13 (lo demás viene de css/unidades.css) */
+
+
+/* La "mini página" donde se ve cada ejercicio */
+
+.escenario{
+
+    background:#1b1b1b;
+    border:2px dashed #444;
+    border-radius:12px;
+    padding:20px;
+    margin-top:15px;
+    min-height:90px;
+
+}
+
+
+.escenario h1{
+
+    color:#ff6600;
+    font-size:32px;
+    margin:0;
+
+}
+
+
+.escenario p{
+
+    margin:8px 0 0;
+
+}
+
+
+.aclaracion{
+
+    color:#888!important;
+    font-size:14px;
+
+}
+
+
+
+/* SHUFFLE */
+
+.dos-columnas{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+
+}
+
+
+.caja{
+
+    flex:1;
+    min-width:220px;
+
+}
+
+
+.caja small{
+
+    color:#888;
+
+}
+
+
+#source,
+#destination{
+
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+
+}
+
+
+#source{
+
+    background:#ff6600;
+    color:white;
+
+}
+
+
+#destination{
+
+    background:white;
+    color:#111;
+
+}
+
+
+
+/* MANIPULAR CSS */
+
+#cuadrado{
+
+    border-radius:12px;
+
+}
+
+
+.square{
+
+    height:120px;
+    width:120px;
+    background-color:#ff6600;
+
+}
+
+
+.escenario-cuadrado{
+
+    min-height:165px;
+
+}
+
+
+
+/* FORMULARIO */
+
+select.form-control{
+
+    appearance:auto;
+
+}
+
+
+.form-check-input:checked{
+
+    background-color:#ff6600;
+    border-color:#ff6600;
+
+}

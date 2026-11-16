@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>U13 - DOM (Document Object Model) | Tobias Daian</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS del portfolio + CSS de las unidades -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/unidades.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-dark fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+    Tobias.DEV
+</a>
+
+<a class="volver" href="../index.html#portfolio">
+    ← Volver al portfolio
+</a>
+
+</div>
+
+</nav>
+
+
+
+<!-- ENCABEZADO -->
+
+<header class="unidad-header">
+
+<div class="container">
+
+<div class="unidad-numero">UNIDAD 13</div>
+
+<h1>
+DOM (Document Object Model)
+</h1>
+
+<p>
+Con el DOM puedo cambiar la página desde JavaScript: seleccionar elementos, modificar su texto y su estilo, y crear elementos nuevos. Cada botón ejecuta lo que en la consigna se hacía por consola.
+</p>
+
+<span class="etiqueta">querySelector()</span>
+<span class="etiqueta">textContent</span>
+<span class="etiqueta">classList</span>
+<span class="etiqueta">createElement()</span>
+
+</div>
+
+</header>
+
+
+
+<!-- EJERCICIOS -->
+
+<main class="container ejercicios">
+
+
+<h2>
+Ejercicios
+</h2>
+
+<hr>
+
+
+<article class="ejercicio" data-codigo="cambiarTextoDelTitulo,cambiarTituloPorParrafo,agregarOtroParrafo">
+
+<h3>
+Manipular Texto Y Contenido
+</h3>
+
+<p>
+Arranco con un título <code>&lt;h1&gt;</code> solo. Desde JavaScript le cambio el texto, después lo
+reemplazo por un párrafo y al final agrego otro párrafo más.
+</p>
+
+<div class="escenario" id="escenario-texto"><h1>Soy un título</h1></div>
+
+<div class="botones">
+<button class="btn-ejecutar" data-ejecutar="cambiarTextoDelTitulo">1. Cambiar el texto</button>
+<button class="btn-ejecutar" data-ejecutar="cambiarTituloPorParrafo">2. Título por párrafo</button>
+<button class="btn-ejecutar" data-ejecutar="agregarOtroParrafo">3. Agregar otro párrafo</button>
+<button class="btn-codigo" data-ejecutar="reiniciarTexto">↺ Reiniciar</button>
+</div>
+
+</article>
+
+
+<article class="ejercicio" data-codigo="shuffle">
+
+<h3>
+¡Shuffle!
+</h3>
+
+<p>
+Dos <code>&lt;div&gt;</code>, uno con ID <code>source</code> y otro con ID <code>destination</code>.
+Los guardo en variables e intercambio el texto de uno con el del otro.
+</p>
+
+<div class="escenario dos-columnas">
+
+<div class="caja">
+<small>div#source</small>
+<div id="source">Hola, soy el texto de SOURCE</div>
+</div>
+
+<div class="caja">
+<small>div#destination</small>
+<div id="destination">Y yo soy el texto de DESTINATION</div>
+</div>
+
+</div>
+
+<div class="botones">
+<button class="btn-ejecutar" data-ejecutar="shuffle">🔀 Intercambiar</button>
+</div>
+
+</article>
+
+
+<article class="ejercicio" data-codigo="darEstiloConStyle,usarClaseSquare,verClassList,sacarClaseSquare,alternarSquare,empezarParpadeo,frenarParpadeo">
+
+<h3>
+Manipular CSS
+</h3>
+
+<p>
+Un <code>&lt;div&gt;</code> que arranca sin estilo (por eso no se ve). Primero le doy alto, ancho y
+color con la propiedad <code>style</code>, y después hago lo mismo con la clase <code>.square</code>
+usando <code>classList</code>. El último paso le pone y le saca la clase cada un segundo con
+<code>setInterval()</code>.
+</p>
+
+<div class="escenario escenario-cuadrado">
+<div id="cuadrado"></div>
+</div>
+
+<div class="botones">
+<button class="btn-ejecutar" data-ejecutar="darEstiloConStyle">1. Estilo con style</button>
+<button class="btn-ejecutar" data-ejecutar="usarClaseSquare">2. Usar la clase .square</button>
+<button class="btn-ejecutar" data-ejecutar="verClassList">3. Ver classList</button>
+<button class="btn-ejecutar" data-ejecutar="sacarClaseSquare">4. Sacar la clase</button>
+<button class="btn-ejecutar" data-ejecutar="empezarParpadeo">5. Cada 1 segundo</button>
+<button class="btn-codigo" data-ejecutar="frenarParpadeo">■ Frenar</button>
+</div>
+
+<div class="respuesta">
+<p class="mb-0">
+<strong>¿Qué devuelve div.classList?</strong> Devuelve un <code>DOMTokenList</code>, que es una lista
+con todas las clases que tiene el elemento en ese momento.
+</p>
+</div>
+
+</article>
+
+
+<article class="ejercicio" data-codigo="crearFormulario,obtenerDatosDelFormulario">
+
+<h3>
+Formulario E Input
+</h3>
+
+<p>
+En el HTML este espacio está vacío: todo el formulario lo crea JavaScript con
+<code>createElement()</code> y <code>appendChild()</code>. Completalo y tocá el botón para leer los
+datos desde JavaScript.
+</p>
+
+<div class="escenario" id="escenario-formulario"></div>
+
+<div class="botones">
+<button class="btn-ejecutar" data-ejecutar="obtenerDatosDelFormulario">Obtener los datos</button>
+</div>
+
+</article>
+
+
+<div class="entre-unidades">
+<a href="../U12/index.html">← U12 - Objetos</a>
+<a href="../U14/index.html">U14 - Eventos →</a>
+</div>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Tobias Daian
+</p>
+
+</footer>
+
+
+<!-- Primero mis ejercicios, después el ayudante que arma los botones -->
+<script src="script.js"></script>
+<script src="../js/unidad.js"></script>
+
+</body>
+
+</html>

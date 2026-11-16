@@ -3,7 +3,7 @@
 //
 //  Los ejercicios de JS usan console.log, alert y prompt.
 //  Para poder probarlos sin abrir la consola, este archivo:
-//   1) le agrega a cada ejercicio los botones "Ejecutar" y "Ver código"
+//   1) le agrega a cada ejercicio el botón "Ejecutar"
 //   2) copia en la página lo que sale por console.log, alert y prompt
 //   3) corta el ejercicio si se toca "Cancelar" en un prompt
 // ============================================================
@@ -133,14 +133,10 @@ function ejecutar(nombreFuncion, salida) {
 
 // Arma los botones de cada tarjeta de ejercicio
 document.querySelectorAll(".ejercicio").forEach(function (tarjeta) {
-  let nombreFuncion = tarjeta.dataset.fn;                       // función que se ejecuta
-  let funcionesCodigo = tarjeta.dataset.codigo || nombreFuncion; // funciones que se muestran
+  let nombreFuncion = tarjeta.dataset.fn;  // función que se ejecuta
 
   let salida = document.createElement("div");
   salida.className = "salida";
-
-  let codigo = document.createElement("pre");
-  codigo.className = "codigo";
 
   // si la tarjeta no trae su fila de botones, la creo
   let botones = tarjeta.querySelector(".botones");
@@ -168,22 +164,5 @@ document.querySelectorAll(".ejercicio").forEach(function (tarjeta) {
     });
   });
 
-  // botón "Ver código"
-  if (funcionesCodigo) {
-    let botonCodigo = document.createElement("button");
-    botonCodigo.className = "btn-codigo";
-    botonCodigo.textContent = "</> Ver código";
-    botonCodigo.addEventListener("click", function () {
-      let nombres = funcionesCodigo.split(",");
-      let textos = nombres.map(function (nombre) {
-        return window[nombre.trim()].toString();
-      });
-      codigo.textContent = textos.join("\n\n");
-      codigo.classList.toggle("visible");
-    });
-    botones.appendChild(botonCodigo);
-  }
-
   tarjeta.appendChild(salida);
-  tarjeta.appendChild(codigo);
 });

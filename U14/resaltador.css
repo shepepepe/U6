@@ -1,0 +1,67 @@
+body{
+
+    background:#050505;
+    color:white;
+    font-family:'Segoe UI', sans-serif;
+    padding:30px 20px 60px;
+
+}
+
+
+.volver{
+
+    color:white;
+    text-decoration:none;
+
+}
+
+
+h1{
+
+    text-align:center;
+    color:#ff6600;
+    font-size:50px;
+    font-weight:900;
+    margin-bottom:5px;
+
+}
+
+
+h2{
+
+    text-align:center;
+    font-size:16px;
+    font-weight:normal;
+    color:#bbb;
+
+}
+
+
+.texto{
+
+    max-width:750px;
+    margin:30px auto 0;
+
+}
+
+
+.texto p{
+
+    font-size:19px;
+    line-height:1.7;
+    padding:10px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+
+}
+
+
+/* La clase que pide la consigna: fondo amarillo y letra roja */
+
+.resaltado{
+
+    background-color:yellow;
+    color:red;
+
+}

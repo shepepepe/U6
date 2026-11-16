@@ -1,0 +1,134 @@
+body{
+
+    background:#050505;
+    color:white;
+    font-family:'Segoe UI', sans-serif;
+    text-align:center;
+    padding:30px 20px 60px;
+
+}
+
+
+.volver{
+
+    display:block;
+    text-align:left;
+    color:white;
+    text-decoration:none;
+
+}
+
+
+h1{
+
+    color:#ff6600;
+    font-size:42px;
+    font-weight:900;
+
+}
+
+
+h2{
+
+    color:#ff6600;
+    margin-top:40px;
+
+}
+
+
+p{
+
+    color:#bbb;
+
+}
+
+
+#input{
+
+    width:100%;
+    max-width:420px;
+    padding:12px 16px;
+    font-size:18px;
+    background:#111;
+    color:white;
+    border:1px solid #ff6600;
+    border-radius:10px;
+    outline:none;
+
+}
+
+
+#input:focus{
+
+    box-shadow:0 0 10px #ff6600;
+
+}
+
+
+.datos{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+
+}
+
+
+.datos label{
+
+    min-width:180px;
+    padding:12px 20px;
+    background:#111;
+    border-left:4px solid #ff6600;
+    border-radius:10px;
+    font-family:Consolas, monospace;
+    font-size:18px;
+
+}
+
+
+
+/* MINI PATATAP */
+
+#escenario{
+
+    position:relative;
+    overflow:hidden;
+    max-width:800px;
+    height:320px;
+    margin:20px auto 0;
+    background:#111;
+    border:2px dashed #444;
+    border-radius:16px;
+
+}
+
+
+.circulo{
+
+    position:absolute;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    animation:aparecer .8s forwards;
+
+}
+
+
+/* El círculo crece y se va haciendo transparente */
+
+@keyframes aparecer{
+
+    from{
+        transform:scale(.2);
+        opacity:1;
+    }
+
+    to{
+        transform:scale(2.2);
+        opacity:0;
+    }
+
+}
